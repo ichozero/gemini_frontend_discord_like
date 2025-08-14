@@ -30,5 +30,6 @@
 
 ## 项目链接
 
-*   **GitHub 仓库:** <mcurl name="ichozero/gemini_frontend_discord_like" url="https://github.com/ichozero/gemini_frontend_discord_like"></mcurl>
-*   **在线预览:** <mcurl name="Gemini Chat - Discord Like" url="https://us-hudiyun.vincentzyu233.cn/gemini_frontend/"></mcurl>
+* **GitHub 仓库:** [ichozero/gemini_frontend_discord_like](https://github.com/ichozero/gemini_frontend_discord_like)
+
+* **在线预览:** [Gemini Chat - Discord Like](https://us-hudiyun.vincentzyu233.cn/gemini_frontend/)
