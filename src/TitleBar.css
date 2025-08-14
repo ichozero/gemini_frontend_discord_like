@@ -1,0 +1,79 @@
+.custom-title-bar {
+  height: 32px;
+  background: #2f3136;
+  border-bottom: 1px solid #202225;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  -webkit-app-region: drag; /* 允许拖拽窗口 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.title-bar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.title-bar-title {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #dcddde;
+}
+
+.title-bar-controls {
+  display: flex;
+  height: 100%;
+  -webkit-app-region: no-drag; /* 按钮区域不允许拖拽 */
+}
+
+.title-bar-button {
+  width: 46px;
+  height: 100%;
+  border: none;
+  background: transparent;
+  color: #dcddde;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.title-bar-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.title-bar-button.close:hover {
+  background: #e81123;
+  color: white;
+}
+
+.title-bar-button:active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.title-bar-button.close:active {
+  background: #c50e1f;
+}
+
+/* 为主应用内容添加顶部边距 */
+.app {
+  padding-top: 32px;
+}
+
+/* 在非 Electron 环境中移除顶部边距 */
+.app:not(.electron-app) {
+  padding-top: 0;
+}
