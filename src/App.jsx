@@ -555,7 +555,7 @@ function App() {
                  <input
                    type="text"
                    className="form-input"
-                   value={localApiConfig.ip}
+                   value={localApiConfig.ip || "us-hudiyun.vincentzyu233.cn"}
                    onChange={(e) => setLocalApiConfig(prev => ({...prev, ip: e.target.value}))}
                    placeholder="127.0.0.1"
                  />
@@ -566,14 +566,13 @@ function App() {
                  <select
                    className="form-select"
                    onChange={(e) => setLocalApiConfig(prev => ({...prev, ip: e.target.value}))}
-                   value={localApiConfig.ip}
+                   value={localApiConfig.ip || "us-hudiyun.vincentzyu233.cn"}
                  >
                    <option value="">选择你的预设或者手动填写</option>
                    <option value="192.168.31.84">192.168.31.84</option>
                    <option value="us-hudiyun.vincentzyu233.cn">us-hudiyun.vincentzyu233.cn</option>
                  </select>
               </div>
-
 
               <div className="form-group">
                 <label className="form-label">端口</label>
