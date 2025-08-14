@@ -1,0 +1,39 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # 或者你的主分支名称，例如 master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build
+      run: npm run build
+      env:
+        GITHUB_PAGES: true # 设置环境变量，让 Vite 知道是 GitHub Pages 部署
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
+        # 如果你的仓库名不是 username.github.io，则需要设置 cname
+        # cname: example.com
+        # 如果你的项目部署在子目录下，例如 https://username.github.io/your-repo-name/
+        # 则需要设置 base_url，并且在 vite.config.js 中设置 base: '/your-repo-name/'
+        # external_repository: ichozero/gemini_frontend_discord_like # 如果部署到其他仓库
+        # publish_branch: gh-pages # 部署到 gh-pages 分支

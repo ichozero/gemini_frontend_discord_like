@@ -5,9 +5,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: process.env.GITHUB_PAGES === 'true' 
-    ? '/gemini_request_discord_like/' 
+    ? './' 
     : process.env.NODE_ENV === 'production' && process.env.BUILD_TARGET === 'web'
-    ? '/genini_frontend/' 
+    ? '/gemini_frontend/' 
     : './', // 为Electron应用使用相对路径
   server: {
     port: process.env.PORT || 3000, // 默认使用3000端口

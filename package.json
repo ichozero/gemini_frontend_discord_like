@@ -3,7 +3,7 @@
   "version": "0.1.0-a1",
   "description": "A Discord-like application for Gemini API",
   "main": "electron/main.js",
-  "homepage": "./",
+  "homepage": "https://ichozero.github.io/gemini_frontend_discord_like/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -21,7 +21,7 @@
     "build:linux": "npm run build && electron-builder --linux",
     "build:mac": "npm run build && electron-builder --mac",
     "build:all": "npm run build && electron-builder --win --linux --mac",
-    "deploy:github": "npm run build:github && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist -r https://github.com/ichozero/gemini_frontend_discord_like.git"
   },
   "keywords": [
     "gemini",
